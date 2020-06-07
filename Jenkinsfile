@@ -1,10 +1,10 @@
-node {
+node("slave") {
    def mvnHome
    stage('Preparation') { 
       
       git 'https://github.com/jglick/simple-maven-project-with-tests.git'
                 
-      mvnHome = tool 'M3'
+      mvnHome = tool 'slaveM3'
    }
    stage('Build') {
       
